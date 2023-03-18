@@ -1,0 +1,4 @@
+# cat=Settings/O; type=string; label= ChatGPT Token
+token =
+# cat=Settings/O; type=string; label= ChatGPT Model
+model = gpt-3.5-turbo

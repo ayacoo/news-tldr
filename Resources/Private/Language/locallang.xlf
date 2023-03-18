@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:tiktok/Resources/Private/Language/locallang.xlf" date="2022-10-13T20:22:32Z" product-name="tiktok">
+		<header/>
+		<body>
+			<trans-unit id="tldr.update" resname="tldr.update">
+				<source>Create news summary</source>
+			</trans-unit>
+			<trans-unit id="tldr.alert.success" resname="tldr.alert.success">
+				<source>Success</source>
+			</trans-unit>
+			<trans-unit id="tldr.alert.success.text" resname="tldr.alert.success.text">
+				<source>The news summary was successfully created</source>
+			</trans-unit>
+			<trans-unit id="tldr.alert.error" resname="tldr.alert.error">
+				<source>Failed to update news summary</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
