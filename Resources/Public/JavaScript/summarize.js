@@ -26,25 +26,29 @@ class Summarize {
     new AjaxRequest(url)
       .post(payload).then(async function (response) {
       const data = await response.resolve();
-      Notification.success(
-        TYPO3.lang['tldr.alert.success'],
-        TYPO3.lang['tldr.alert.success.text']
-      );
+      if (data.success === true) {
+        Notification.success(
+            TYPO3.lang['tldr.alert.success'],
+            TYPO3.lang['tldr.alert.success.text']
+        );
 
-      var inputBox = document.querySelector('[data-formengine-input-name="data[tx_news_domain_model_news][' + newsId + '][teaser]"]');
-      var speed = 50;
+        var inputBox = document.querySelector('[data-formengine-input-name="data[tx_news_domain_model_news][' + newsId + '][teaser]"]');
+        var speed = 50;
 
-      inputBox.value = '';
+        inputBox.value = '';
 
-      var i = 0;
-      var timer = setInterval(function () {
-        if (i < data.text.length) {
-          inputBox.value += data.text.charAt(i);
-          i++;
-        } else {
-          clearInterval(timer);
-        }
-      }, speed);
+        var i = 0;
+        var timer = setInterval(function () {
+          if (i < data.text.length) {
+            inputBox.value += data.text.charAt(i);
+            i++;
+          } else {
+            clearInterval(timer);
+          }
+        }, speed);
+      } else {
+        Notification.error(TYPO3.lang['tldr.alert.error'], data.text);
+      }
 
     }, function (error) {
       Notification.error(TYPO3.lang['tldr.alert.error'], error.response.status + ' ' + error.response.statusText);

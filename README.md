@@ -6,9 +6,6 @@ The extension makes it possible to create short news summaries using ChatGPT.
 
 ## 2 Hints
 
-- The extension is only a proof of concept and was tested in the environment of
-  TYPO3 version 12 and PHP 8.1.
-- This code is experimental
 - The code can be used and further developed as desired, e.g. for a backport to
   version 11
 - Only the field bodytext is read. Other linked content elements must be read and
@@ -23,7 +20,7 @@ To use this extension, you need the following requirements:
 - PHP version 8.1 or higher
 - TYPO3 version 12
 - [News][3] Extension 11 or higher
-- [ChatGPT API Token][2]
+- [ChatGPT API Token][2] (Please note the number of tokens and costs)
 
 ### 3.2 Installation
 
@@ -39,7 +36,7 @@ composer require ayacoo/news-tldr
 
 ### 3.3 Event / EventListener
 
-To modify the ChatGPT request, e.g. to change the number of characters, there is
+To modify the ChatGPT request, e.g. to change the payload, there is
 an event: `ModifyChatGptContentEvent`.
 
 ### EventListener registration

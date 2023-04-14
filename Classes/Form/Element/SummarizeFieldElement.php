@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Ayacoo\NewsTldr\Form\Element;
 
 use TYPO3\CMS\Backend\Form\Element\AbstractFormElement;
+use TYPO3\CMS\Core\Imaging\Icon;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
@@ -30,11 +31,16 @@ class SummarizeFieldElement extends AbstractFormElement
         $html[] = '<div class="form-wizards-element">';
         $html[] = '<div class="form-control-wrap">';
 
+        $icon = $this->iconFactory->getIcon(
+            'actions-dice',
+            Icon::SIZE_SMALL,
+            'overlay-identifier'
+        );
 
         $html[] = '<button class="btn btn-default t3js-ayacoo-tldr" data-newsid="' . $row['uid'] . '">
          <span class="t3js-icon icon icon-size-small icon-state-default icon-apps-pagetree-page-default" data-identifier="apps-pagetree-page-default">
              <span class="icon-markup">
-                <svg class="icon-color"><use xlink:href="/typo3/sysext/core/Resources/Public/Icons/T3Icons/sprites/apps.svg#apps-pagetree-page-default"></use></svg>
+                ' . $icon->getMarkup() . '
              </span>
          </span>
         Start!

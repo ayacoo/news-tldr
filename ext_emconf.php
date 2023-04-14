@@ -6,13 +6,13 @@ $EM_CONF['news_tldr'] = [
     'category' => 'plugin',
     'constraints' => [
         'depends' => [
-            'typo3' => '12.0.0-12.9.99',
+            'typo3' => '12.3.0-12.9.99',
             'news' => '11.0.0-11.9.99',
         ],
         'conflicts' => [],
         'suggests' => [],
     ],
-    'state' => 'beta',
+    'state' => 'stable',
     'clearCacheOnLoad' => true,
     'author' => 'Guido Schmechel',
     'author_email' => 'info@ayacoo.de',
