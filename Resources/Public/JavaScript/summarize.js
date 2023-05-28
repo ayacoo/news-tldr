@@ -5,6 +5,7 @@
 
 import AjaxRequest from "@typo3/core/ajax/ajax-request.js"
 import Notification from "@typo3/backend/notification.js";
+import nprogress from "nprogress";
 
 class Summarize {
   constructor() {
@@ -23,6 +24,7 @@ class Summarize {
       uid: newsId
     }
 
+    nprogress.start();
     new AjaxRequest(url)
       .post(payload).then(async function (response) {
       const data = await response.resolve();
@@ -46,12 +48,15 @@ class Summarize {
             clearInterval(timer);
           }
         }, speed);
+        nprogress.done();
       } else {
         Notification.error(TYPO3.lang['tldr.alert.error'], data.text);
+        nprogress.done();
       }
 
     }, function (error) {
       Notification.error(TYPO3.lang['tldr.alert.error'], error.response.status + ' ' + error.response.statusText);
+      nprogress.done();
     });
   }
 }

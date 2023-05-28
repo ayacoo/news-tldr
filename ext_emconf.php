@@ -17,5 +17,5 @@ $EM_CONF['news_tldr'] = [
     'author' => 'Guido Schmechel',
     'author_email' => 'info@ayacoo.de',
     'author_company' => 'ayacoo',
-    'version' => '1.0.0',
+    'version' => '1.0.1',
 ];
