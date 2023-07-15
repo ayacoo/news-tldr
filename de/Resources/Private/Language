@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="en" datatype="plaintext" original="EXT:tiktok/Resources/Private/Language/locallang_db.xlf" date="2022-10-13T20:22:32Z" product-name="tiktok" target-language="de">
+  <file source-language="en" datatype="plaintext" original="EXT:tiktok/Resources/Private/Language/locallang.xlf" date="2022-10-13T20:22:32Z" product-name="tiktok" target-language="de">
     <header/>
     <body>
-      <trans-unit id="tx_news_domain_model_news.chat_gpt_summary" resname="tx_news_domain_model_news.chat_gpt_summary">
-        <source>Create a short summary</source>
-        <target state="needs-translation">Create a short summary</target>
+      <trans-unit id="tldr.update" resname="tldr.update">
+        <source>Create news summary</source>
+        <target state="translated">News-Zusammenfassung erstellen</target>
+      </trans-unit>
+      <trans-unit id="tldr.alert.success" resname="tldr.alert.success">
+        <source>Success</source>
+        <target state="translated">Erfolg</target>
+      </trans-unit>
+      <trans-unit id="tldr.alert.success.text" resname="tldr.alert.success.text">
+        <source>The news summary was successfully created</source>
+        <target state="translated">Die News-Zusammenfassung wurde erfolgreich erstellt</target>
+      </trans-unit>
+      <trans-unit id="tldr.alert.error" resname="tldr.alert.error">
+        <source>Failed to update news summary</source>
+        <target state="translated">Aktualisierung der News-Zusammenfassung fehlgeschlagen</target>
+      </trans-unit>
+      <trans-unit id="no_valid_token" resname="no_valid_token">
+        <source>Please set a token in the extension settings</source>
+        <target state="translated">Bitte setzen Sie einen Token in den Erweiterungseinstellungen</target>
+      </trans-unit>
+      <trans-unit id="no_suitable_feedback" resname="no_suitable_feedback">
+        <source>No suitable feedback from ChatGPT</source>
+        <target state="translated">Kein passendes Feedback von ChatGPT</target>
+      </trans-unit>
+      <trans-unit id="no_valid_json" resname="no_valid_json">
+        <source>The request did not return JSON data</source>
+        <target state="translated">Die Anfrage gab keine JSON-Daten zurück</target>
+      </trans-unit>
+      <trans-unit id="status_code_is" resname="status_code_is">
+        <source>Returned status code is </source>
+        <target state="translated">Zurückgegebener Statuscode ist </target>
       </trans-unit>
     </body>
   </file>
