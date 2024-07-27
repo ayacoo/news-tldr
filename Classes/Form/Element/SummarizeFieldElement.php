@@ -4,9 +4,12 @@ declare(strict_types=1);
 namespace Ayacoo\NewsTldr\Form\Element;
 
 use TYPO3\CMS\Backend\Form\Element\AbstractFormElement;
-use TYPO3\CMS\Core\Imaging\Icon;
+use TYPO3\CMS\Backend\Form\NodeFactory;
+use TYPO3\CMS\Core\Imaging\IconFactory;
+use TYPO3\CMS\Core\Imaging\IconSize;
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Utility\StringUtility;
 
 class SummarizeFieldElement extends AbstractFormElement
 {
@@ -22,18 +25,24 @@ class SummarizeFieldElement extends AbstractFormElement
 
         $row = $this->data['databaseRow'];
 
+        $nodeFactory = GeneralUtility::makeInstance(NodeFactory::class);
+        $this->injectNodeFactory($nodeFactory);
         $fieldInformationResult = $this->renderFieldInformation();
         $resultArray = $this->mergeChildReturnIntoExistingResult($this->initializeResultArray(), $fieldInformationResult, false);
 
+        $fieldId = StringUtility::getUniqueId('formengine-textarea-');
+
         $html = [];
+        $html[] = $this->renderLabel($fieldId);
         $html[] = '<div class="formengine-field-item t3js-formengine-field-item">';
         $html[] = '<div class="form-wizards-wrap">';
         $html[] = '<div class="form-wizards-element">';
         $html[] = '<div class="form-control-wrap">';
 
-        $icon = $this->iconFactory->getIcon(
+        $iconFactory = GeneralUtility::makeInstance(IconFactory::class);
+        $icon = $iconFactory->getIcon(
             'actions-dice',
-            Icon::SIZE_SMALL,
+            IconSize::SMALL,
             'overlay-identifier'
         );
 
