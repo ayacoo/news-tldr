@@ -17,8 +17,8 @@ The extension makes it possible to create short news summaries using ChatGPT.
 
 To use this extension, you need the following requirements:
 
-- PHP version 8.1 or higher
-- TYPO3 version 12
+- PHP version 8.2 or higher
+- TYPO3 version 13
 - [News][3] Extension 11 or higher
 - [ChatGPT API Token][2] (Please note the number of tokens and costs)
 
@@ -68,7 +68,7 @@ class ContentListener
         $row = $event->getRow()
         $text = strip_tags($row['bodytext'] ?? '');
 
-        $content = 'Fasse mir diesen Text in 100 Zeichen zusammen: ' . $text;
+        $content = 'Summarise this text for me in 100 characters: ' . $text;
         $event->setContent($content);
 
         return $event;
