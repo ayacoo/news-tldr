@@ -1,6 +1,6 @@
 {
 	"name": "ayacoo/news-tldr",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"type": "typo3-cms-extension",
 	"description": "Creates a short summary for news via ChatGPT",
 	"homepage": "https://www.ayacoo.de",
@@ -14,7 +14,7 @@
 		"GPL-2.0-or-later"
 	],
 	"require": {
-		"php": ">=8.2 < 8.4",
+		"php": ">=8.2 < 8.5",
 		"typo3/cms-core": "^13.4",
 		"georgringer/news": "^12.0",
 		"openai-php/client": "*"
