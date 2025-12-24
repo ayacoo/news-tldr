@@ -1,6 +1,6 @@
 {
 	"name": "ayacoo/news-tldr",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"type": "typo3-cms-extension",
 	"description": "Creates a short summary for news via ChatGPT",
 	"homepage": "https://www.ayacoo.de",
