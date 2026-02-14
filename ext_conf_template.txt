@@ -1,6 +1,20 @@
-# cat=Settings/O; type=string; label= OpenAI Token
-token =
-# cat=Settings/O; type=string; label= ChatGPT Model
-model = gpt-3.5-turbo
+# General
+###########################
+# cat=Settings/O; type=options[openai,gemini]; label= AI Provider
+provider = openai
 # cat=Settings/O; type=string; label= Length of summary
 length = 200
+
+# OpenAI
+###########################
+# cat=OpenAi/O; type=string; label= OpenAI Token
+token =
+# cat=OpenAi/O; type=string; label= OpenAI Model
+model = gpt-3.5-turbo
+
+# Gemini
+###########################
+# cat=Gemini/O; type=string; label= Gemini API Key
+geminiApiKey =
+# cat=Gemini/O; type=string; label= Gemini Model
+geminiModel = gemini-2.5-flash
